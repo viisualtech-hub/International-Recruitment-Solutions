@@ -1,0 +1,1 @@
+Place uploaded industry imagery here and add its path to SITE_IMAGES in js/image-manager.js when an industry section uses it.

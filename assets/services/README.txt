@@ -1,0 +1,1 @@
+Place bartending.jpg, call-centre.jpg, hospitality.jpg and recruitment.jpg here. These are intentionally not generated or replaced by stock images.

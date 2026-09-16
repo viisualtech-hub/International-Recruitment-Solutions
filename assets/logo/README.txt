@@ -1,0 +1,1 @@
+The supplied original company logo is stored here as company-logo.png. The website uses it unchanged; the display layer removes only the edge-connected white canvas when rendering it.

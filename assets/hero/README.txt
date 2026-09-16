@@ -1,0 +1,1 @@
+Place uploaded hero-1.jpg, hero-2.jpg and hero-3.jpg files here. Update SITE_IMAGES in js/image-manager.js to add, remove or reorder images.

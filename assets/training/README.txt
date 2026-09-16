@@ -1,0 +1,1 @@
+Place uploaded training imagery here and add its path to SITE_IMAGES in js/image-manager.js when a training section uses it.
