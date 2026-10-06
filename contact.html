@@ -119,12 +119,26 @@
         <!-- ENQUIRY FORM -->
         <div class="form-card">
 
-          <div class="success" hidden>
+          <!-- FORM SUCCESS MESSAGE -->
+          <div
+            class="success"
+            data-fs-success
+            hidden
+          >
             Thank you for contacting International Recruitment Solutions.
             Your enquiry has been received and our team will contact you shortly.
           </div>
 
+          <!-- FORM ERROR MESSAGE -->
+          <div
+            class="error"
+            data-fs-error
+            role="alert"
+          ></div>
+
+
           <form
+            id="contact-form"
             data-enquiry-form
             novalidate
             enctype="multipart/form-data"
@@ -144,9 +158,13 @@
                   type="text"
                   autocomplete="name"
                   required
+                  data-fs-field
                 >
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="name"
+                ></span>
               </div>
 
 
@@ -162,9 +180,13 @@
                   type="email"
                   autocomplete="email"
                   required
+                  data-fs-field
                 >
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="email"
+                ></span>
               </div>
 
 
@@ -180,9 +202,13 @@
                   type="tel"
                   autocomplete="tel"
                   required
+                  data-fs-field
                 >
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="phone"
+                ></span>
               </div>
 
 
@@ -196,6 +222,7 @@
                   id="enquiryType"
                   name="enquiryType"
                   required
+                  data-fs-field
                 >
                   <option value="">
                     Choose one
@@ -218,7 +245,10 @@
                   </option>
                 </select>
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="enquiryType"
+                ></span>
               </div>
 
 
@@ -232,6 +262,7 @@
                   id="service"
                   name="service"
                   required
+                  data-fs-field
                 >
                   <option value="">
                     Choose one
@@ -258,7 +289,10 @@
                   </option>
                 </select>
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="service"
+                ></span>
               </div>
 
 
@@ -272,6 +306,7 @@
                   id="contactMethod"
                   name="contactMethod"
                   required
+                  data-fs-field
                 >
                   <option value="">
                     Choose one
@@ -290,7 +325,10 @@
                   </option>
                 </select>
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="contactMethod"
+                ></span>
               </div>
 
 
@@ -304,10 +342,14 @@
                   id="message"
                   name="message"
                   required
+                  data-fs-field
                   placeholder="How can we help?"
                 ></textarea>
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="message"
+                ></span>
               </div>
 
 
@@ -324,7 +366,10 @@
                   accept=".pdf,.doc,.docx"
                 >
 
-                <span class="error"></span>
+                <span
+                  class="error"
+                  data-fs-error="cv"
+                ></span>
               </div>
 
             </div>
@@ -333,6 +378,7 @@
             <button
               class="button"
               type="submit"
+              data-fs-submit-btn
             >
               Send enquiry <span>↗</span>
             </button>
@@ -471,7 +517,25 @@
   <!-- JAVASCRIPT -->
   <script src="js/image-manager.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/forms.js"></script>
+
+  <!-- FORMSPREE AJAX -->
+  <script>
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+
+    formspree('initForm', {
+      formElement: '#contact-form',
+      formId: 'xdeaaaow'
+    });
+  </script>
+
+  <script
+    src="https://unpkg.com/@formspree/ajax@1"
+    defer
+  ></script>
 
 </body>
 </html>
